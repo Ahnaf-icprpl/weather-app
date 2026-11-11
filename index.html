@@ -4,9 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BarNaf Weather App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>BarNaf Weather App</h1>
-    <h3>We provide accurate and up-to-date weather info in indonesia using the BMKG API</h3>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-icon">☁</span>
+            <h2>BarNaf Weather App</h2>
+        </div>
+
+        <p>Weather Information</p>
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+
+        <!-- INTRO -->
+        <section class="intro">
+            <p class="subtitle">WEATHER UPDATE</p>
+
+            <h1>Weather Today</h1>
+
+            <p class="description">
+                Check the current weather conditions
+                in your favorite city.
+            </p>
+        </section>
+
+
+        <!-- CITY SELECTOR -->
+        <section class="city-selector">
+
+            <label for="city-select">Select Your City</label>
+
+            <div class="select-wrapper">
+                <select id="city-select" name="city">
+                    <option value="" selected disabled>
+                        Choose a city
+                    </option>
+                    <option value="malang">Malang</option>
+                    <option value="surabaya">Surabaya</option>
+                    <option value="jakarta">Jakarta</option>
+                    <option value="bandung">Bandung</option>
+                    <option value="yogyakarta">Yogyakarta</option>
+                    <option value="denpasar">Denpasar</option>
+                    <option value="semarang">Semarang</option>
+                </select>
+
+                <button id="check-weather" type="button">
+                    Check Weather
+                </button>
+            </div>
+
+        </section>
+
+
+        <!-- WEATHER RESULT -->
+        <section class="weather-result" id="weather-result">
+
+            <div class="result-header">
+                <div>
+                    <p class="result-label">CURRENT WEATHER</p>
+                    <h2 id="city-name">Your City</h2>
+                </div>
+
+                <div class="datetime">
+                    <p id="weather-date">Date</p>
+                    <p id="weather-time">Time</p>
+                </div>
+            </div>
+
+
+            <!-- MAIN TEMPERATURE -->
+            <div class="main-weather">
+
+                <div class="weather-icon">
+                    ☁️
+                </div>
+
+                <div class="temperature-info">
+                    <h2 id="temperature">--°C</h2>
+                    <p id="weather-description">
+                        Weather description
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- WEATHER DETAILS -->
+            <div class="weather-details">
+
+                <div class="detail-item">
+                    <span class="detail-icon">💧</span>
+                    <div>
+                        <p>Humidity</p>
+                        <h3 id="humidity">--%</h3>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <span class="detail-icon">🌬️</span>
+                    <div>
+                        <p>Wind Speed</p>
+                        <h3 id="wind-speed">-- km/h</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 BarNaf Weather App</p>
+    </footer>
+
 </body>
 </html>
